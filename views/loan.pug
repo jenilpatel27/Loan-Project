@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= loan.loan
+  h5 loan by #{loan.amount}
+  p= loan.description
+  hr
+  a.btn.btn-default(href='/loans/edit/'+loan._id) Edit
+  a.btn.btn-danger.delete-loan(href='#', data-id=loan._id) Delete

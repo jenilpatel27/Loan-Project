@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1 #{title}
+  ul.list-group
+    each loan, i in loans
+      li.list-group-item
+        a(href='/loan/'+loan._id)= loan.loan
